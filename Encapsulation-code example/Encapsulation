@@ -1,0 +1,49 @@
+public class Encapsulation {
+    public static void main(String[] args) {
+        Human human1 = new Human();
+        human1.setName("UserName");
+        human1.setAge(23);
+        human1.speak();
+        System.out.println("Show the value in the main method: " +human1.getName());
+        System.out.println("Show the age in the main method: " +human1.getAge());
+        System.out.println("Years lefts to retirement: " + human1.calculateYearsRetirement());
+    }
+}
+
+class Human{
+    private String name;
+    private int age;
+
+    public void setName(String userName){        // public void setName та public String getName - for assigning and returning the name variable
+        if (userName.isEmpty()){                        // It’s possible to write this without if, but in this case the if statement allows us to validate the input and avoid an empty name using the isEmpty method
+            System.out.println("You entered an empty name");
+        } else {
+            name = userName;
+        }
+    }
+
+    public String getName() {       //  A method that returns a string; we use String because the value is text — if it were a number, we would use int
+        return name;
+    }
+
+    public void setAge(int userAge) {
+        if (userAge<0){                             // In the setter, we added a validation check to ensure the age is greater than 0; if it’s less, the body of the conditional is executed
+            System.out.println("Age must be greater than zero");
+        } else {
+        age = userAge;
+        }
+    }
+
+    public int getAge() {           // A method that returns a value of type int because we are returning an integer variable
+        return age;
+    }
+
+    void speak(){
+        System.out.println("My name is " + name + ", I am " + age + " years old");
+    }
+
+    int calculateYearsRetirement(){
+        int yearsLeftsToRetirement = 65-age;
+        return yearsLeftsToRetirement;
+    }
+}
