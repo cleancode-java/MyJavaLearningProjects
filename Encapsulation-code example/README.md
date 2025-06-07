@@ -70,3 +70,8 @@ java Encapsulation
 
 Project Purpose
 This repository showcases my grasp of Java fundamentals and core OOP concepts, serving as a stepping-stone toward more sophisticated applications (e.g. FinTech services, backend APIs, user-driven console apps).
+
+---
+
+© 2025 [cleancode-java].  
+This project is for educational purposes.
