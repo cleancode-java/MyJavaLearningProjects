@@ -1,0 +1,57 @@
+public class DiscriminantSolver {
+    public static void solve(double a, double b, double c) {
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    System.out.println("Infinite solutions");
+                } else {
+                    System.out.println("No solutions");
+                }
+            } else {
+                double x1 = -c / b;
+                System.out.println("x1=" + formatResult(x1));
+            }
+        } else {
+            double discriminant = b * b - 4 * a * c;
+
+            if (discriminant > 0) {
+                double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                System.out.println("x1=" + formatResult(x1));
+                System.out.println("x2=" + formatResult(x2));
+            } else if (discriminant == 0) {
+                double x1 = -b / (2 * a);
+                System.out.println("x1=" + formatResult(x1));
+            } else {
+                System.out.println("No real solutions");
+            }
+        }
+    }
+
+    public static String[] solveAndReturn(double a, double b, double c) {
+        if (a == 0) {
+            if (b == 0) {
+                return null;
+            } else {
+                double x1 = -c / b;
+                return new String[] { formatResult(x1), formatResult(x1) };
+            }
+        } else {
+            double discriminant = b * b - 4 * a * c;
+            if (discriminant > 0) {
+                double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                return new String[] { formatResult(x1), formatResult(x2) };
+            } else if (discriminant == 0) {
+                double x1 = -b / (2 * a);
+                return new String[] { formatResult(x1), formatResult(x1) };
+            } else {
+                return null;
+            }
+        }
+    }
+
+    public static String formatResult(double value) {
+        return String.format("%.6f", value);
+    }
+}
