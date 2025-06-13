@@ -1,4 +1,4 @@
-# DiscriminantSolverProgramm
+#  Quadratic Equation Solver (Discriminant Solver)
 
 A simple Java application for solving quadratic and linear equations using the discriminant method.  
 The code is organized into two separate classes: one for the program entry point and one for the mathematical calculations.
@@ -6,14 +6,11 @@ The code is organized into two separate classes: one for the program entry point
 ---
 
 ## Project Structure
-DiscriminantSolverProgramm/
-│
-├── src/
-
-│ 
-├── Main.java # Program entry point
-│ 
-└── DiscriminantSolver.java # Logic for solving equations
+DiscriminantSolverProgramm
+<pre><code> DiscriminantSolverProgramm
+  ├── src/
+  │ ├── Main.java # Program entry point
+  │ └── DiscriminantSolver.java # Logic for solving equations </code></pre>
 
 ---
 
@@ -40,7 +37,7 @@ Run the program:
    
 ---
 
-## 🧑‍💻 Author
+## Author
 
 Created by **[cleancode-java](https://github.com/cleancode-java)**  
 Year: `2025`  
