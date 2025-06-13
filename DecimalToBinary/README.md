@@ -29,13 +29,14 @@ Binary equivalent: 1010
 
 ## How to Run
 
-1. Clone or download this repository.
-2. Open the project in your Java IDE.
-3. Compile and run the `DecimalToBinary` class.
+Clone or download this repository.
+Open the project in your Java IDE.
+Compile and run the DecimalToBinary class.
 
-### Alternatively:
-If using command line:
+### Alternatively, from the command line:
+
 javac DecimalToBinary.java
+
 java DecimalToBinary
 
 
