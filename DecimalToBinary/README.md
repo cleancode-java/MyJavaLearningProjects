@@ -25,7 +25,7 @@ Binary equivalent: 1010
 ## Technologies Used
 
 - Java (JDK 17+ recommended)
-- IntelliJ IDEA (or any Java IDE)
+- IntelliJ IDEA
 
 ## How to Run
 
