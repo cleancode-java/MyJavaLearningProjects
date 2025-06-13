@@ -1,28 +1,28 @@
 public class DiscriminantSolver {
     public static void solve(double a, double b, double c) {
-        if (a == 0) {
+        if (a == 0) {               // Check if a == 0 (not a quadratic equation)
             if (b == 0) {
                 if (c == 0) {
                     System.out.println("Infinite solutions");
                 } else {
                     System.out.println("No solutions");
                 }
-            } else {
+            } else {          // Linear equation: bx + c = 0
                 double x1 = -c / b;
                 System.out.println("x1=" + formatResult(x1));
             }
         } else {
-            double discriminant = b * b - 4 * a * c;
+            double discriminant = b * b - 4 * a * c;           // Calculate the discriminant for the quadratic equation
 
-            if (discriminant > 0) {
+            if (discriminant > 0) {          // Discriminant > 0: two distinct real roots
                 double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
                 double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
                 System.out.println("x1=" + formatResult(x1));
                 System.out.println("x2=" + formatResult(x2));
-            } else if (discriminant == 0) {
+            } else if (discriminant == 0) {     // Discriminant == 0: one real root
                 double x1 = -b / (2 * a);
                 System.out.println("x1=" + formatResult(x1));
-            } else {
+            } else {                            // Discriminant < 0: no real solutions
                 System.out.println("No real solutions");
             }
         }
@@ -51,7 +51,7 @@ public class DiscriminantSolver {
         }
     }
 
-    public static String formatResult(double value) {
+    public static String formatResult(double value) {           // Method for formatting output to 6 decimal places
         return String.format("%.6f", value);
     }
 }
