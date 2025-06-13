@@ -9,8 +9,11 @@ The code is organized into two separate classes: one for the program entry point
 DiscriminantSolverProgramm/
 │
 ├── src/
-│ ├── Main.java # Program entry point
-│ └── DiscriminantSolver.java # Logic for solving equations
+
+│ 
+├── Main.java # Program entry point
+│ 
+└── DiscriminantSolver.java # Logic for solving equations
 
 ---
 
