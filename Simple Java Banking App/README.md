@@ -34,3 +34,8 @@ Balance after withdrawal: ₴500.0
 ## Author
  
 cleancode-java | Open to work | GitHub: https://github.com/cleancode-java/
+
+## License
+
+This project is licensed under the Apache License, Version 2.0.  
+See the [LICENSE](https://github.com/cleancode-java/MyJavaLearningProjects/blob/main/LICENSE) file for details.
