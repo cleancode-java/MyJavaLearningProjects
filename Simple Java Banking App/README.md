@@ -16,7 +16,7 @@ It demonstrates core OOP principles such as encapsulation, input validation, and
 - Validation of input data (empty name/account or negative values).
 - Clear system messages for each action.
 
-## Sample Output
+```## Sample Output
 User created: UserName
 Current balance: ₴2000.0
 Successfully deposited ₴1000.0
@@ -24,6 +24,7 @@ Balance after deposit: ₴3000.0
 Insufficient funds to withdraw ₴4000.0
 Successfully withdrew ₴2500.0
 Balance after withdrawal: ₴500.0
+```
 
 ## Technologies Used
 
