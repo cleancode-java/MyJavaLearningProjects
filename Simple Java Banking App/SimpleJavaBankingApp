@@ -1,0 +1,84 @@
+public class SimpleJavaBankingApp {
+    public static void main(String[] args) {
+        User user1 = new User("UserName", "UA987654321", 2000);
+
+        System.out.println("Current balance: " + user1.getBalance());
+
+        // Deposit
+        user1.deposit(1000);
+        System.out.println("Balance after deposit: " + user1.getBalance());
+
+        // Attempt to withdraw more than available
+        user1.withdraw(4000); // insufficient funds
+
+        // Attempt to withdraw a valid amount
+        user1.withdraw(2500);
+        System.out.println("Balance after withdrawal: " + user1.getBalance());
+    }
+}
+
+class User {
+    private String name;
+    private String accountNumber;
+    private double balance;
+
+    public User(String name, String accountNumber, double balance) {
+        if (name.isEmpty() || accountNumber.isEmpty() || balance < 0) {
+            System.out.println("Error: invalid input data");
+        } else {
+            this.name = name;
+            this.accountNumber = accountNumber;
+            this.balance = balance;
+            System.out.println("User created: " + name);
+        }
+    }
+
+    // Getter for balance
+    public double getBalance() {
+        return balance;
+    }
+
+    // Deposit funds
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Successfully deposited " + amount);
+        } else {
+            System.out.println("Deposit amount must be greater than 0");
+        }
+    }
+
+    // Withdraw funds
+    public void withdraw(double amount) {
+        if (amount <= 0) {
+            System.out.println("Withdrawal amount must be greater than 0");
+        } else if (amount > balance) {
+            System.out.println("Insufficient funds to withdraw " + amount);
+        } else {
+            balance -= amount;
+            System.out.println("Successfully withdrew " + amount);
+        }
+    }
+
+    // Getter and setter for name
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (!name.isEmpty()) {
+            this.name = name;
+        }
+    }
+
+    //  Getter and setter for accountNumber
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        if (!accountNumber.isEmpty()) {
+            this.accountNumber = accountNumber;
+        }
+    }
+}
